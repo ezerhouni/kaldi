@@ -22,6 +22,8 @@ function show_help
       echo "e.g.: $0 data/train"
 }      
 
+data=$1
+
 while [ $# -ne 0 ] ; do
   case "$1" in
     "--no-feats")
@@ -44,7 +46,6 @@ while [ $# -ne 0 ] ; do
         show_help;
         exit 1
       fi
-      data=$1
       ;;
   esac
   shift
